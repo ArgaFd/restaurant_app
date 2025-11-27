@@ -7,7 +7,12 @@ const HomePage = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url("/images/bacgkround selamat datang.jpeg")' 
+          backgroundImage: 'url("/images/background.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          minHeight: '100vh',
+          width: '100%'
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
