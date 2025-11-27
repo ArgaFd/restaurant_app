@@ -2,147 +2,154 @@ import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800">
-      {/* Animated Background Pattern */}
-      <div className="absolute inset-0 bg-black opacity-20">
+    <div className="min-h-screen relative">
+      {/* Background Image with Overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ 
+          backgroundImage: 'url("/images/bacgkround selamat datang.jpeg")' 
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
+      
+      {/* Animated Background Pattern - Subtle */}
+      <div className="absolute inset-0 bg-black opacity-10">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}></div>
       </div>
 
-      {/* Hero Section - Desktop Fullscreen Fixed */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60"></div>
-        </div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
-          <div className="text-center lg:text-left lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
-            {/* Left Content - Fixed Layout */}
-            <div className="space-y-6 lg:space-y-8">
-              {/* Animated Badge */}
-              <div className="inline-flex items-center px-4 py-2 text-sm lg:text-base font-bold text-white bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                <span className="w-2 h-2 lg:w-3 lg:h-3 bg-green-400 rounded-full mr-2 lg:mr-3 animate-pulse"></span>
-                Open for Business 24/7
-              </div>
-              
-              <div className="space-y-4 lg:space-y-6">
-                <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-tight">
-                  <span className="block mb-2 lg:mb-4 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500">
-                    Restaurant
-                  </span>
-                  <span className="block text-2xl sm:text-4xl lg:text-5xl xl:text-6xl text-white/90">
-                    Digital Experience
-                  </span>
-                </h1>
-                
-                <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white/80 leading-relaxed max-w-3xl">
-                  Transform your dining experience with 
-                  <span className="font-bold text-yellow-400"> QR Code Ordering</span>, 
-                  <span className="font-bold text-green-400"> Instant Payments</span>, and 
-                  <span className="font-bold text-blue-400"> Smart Analytics</span>
-                </p>
-              </div>
-              
-              {/* Enhanced CTA Buttons - Fixed Size */}
-              <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 lg:gap-6">
-                <Link
-                  to="/scan"
-                  className="group relative inline-flex items-center justify-center px-6 sm:px-8 lg:px-10 xl:px-12 py-3 lg:py-4 text-base sm:text-lg lg:text-lg xl:text-xl font-black text-white bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl transition-all transform hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/25 overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div className="relative flex items-center">
-                    <svg className="w-5 h-5 sm:w-6 lg:w-7 xl:w-8 mr-2 sm:mr-3 lg:mr-3 xl:mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M12 4v16m8-8H4" />
-                    </svg>
-                    <span>Scan & Order Now</span>
-                    <svg className="w-4 h-4 sm:w-5 lg:w-5 xl:w-6 ml-2 lg:ml-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </div>
-                </Link>
-                
-                <Link
-                  to="/menu?table=1"
-                  className="group relative inline-flex items-center justify-center px-6 sm:px-8 lg:px-10 xl:px-12 py-3 lg:py-4 text-base sm:text-lg lg:text-lg xl:text-xl font-black text-white bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl transition-all transform hover:scale-105 hover:bg-white/20 hover:shadow-2xl hover:shadow-white/10 overflow-hidden"
-                >
-                  <div className="relative flex items-center">
-                    <svg className="w-5 h-5 sm:w-6 lg:w-7 xl:w-8 mr-2 sm:mr-3 lg:mr-3 xl:mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                    <span>View Menu</span>
-                  </div>
-                </Link>
-              </div>
-            </div>
-            
-            {/* Right Content - Desktop Visual Fixed */}
-            <div className="hidden lg:block relative">
-              <div className="relative">
-                {/* Phone Mockup - Fixed Size */}
-                <div className="relative mx-auto w-64 h-[500px] bg-gradient-to-br from-gray-900 to-gray-800 rounded-[2.5rem] shadow-2xl border-6 border-gray-800 overflow-hidden">
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-2xl"></div>
-                  
-                  {/* Screen Content - Fixed */}
-                  <div className="h-full bg-gradient-to-br from-orange-50 to-red-50 p-4">
-                    <div className="text-center mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl mx-auto mb-2"></div>
-                      <div className="text-sm font-black text-gray-900">Restaurant App</div>
-                      <div className="text-xs text-gray-600">Meja 1</div>
-                    </div>
-                    
-                    {/* Menu Items - Fixed */}
-                    <div className="space-y-3">
-                      <div className="bg-white rounded-xl p-3 shadow">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-10 h-10 bg-orange-100 rounded-lg"></div>
-                          <div className="flex-1">
-                            <div className="h-2 bg-gray-800 rounded w-3/4 mb-1"></div>
-                            <div className="h-1 bg-gray-300 rounded w-1/2"></div>
-                          </div>
-                          <div className="text-sm font-black text-orange-600">25K</div>
-                        </div>
-                      </div>
-                      
-                      <div className="bg-white rounded-xl p-3 shadow">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-10 h-10 bg-green-100 rounded-lg"></div>
-                          <div className="flex-1">
-                            <div className="h-2 bg-gray-800 rounded w-3/4 mb-1"></div>
-                            <div className="h-1 bg-gray-300 rounded w-1/2"></div>
-                          </div>
-                          <div className="text-sm font-black text-green-600">20K</div>
-                        </div>
-                      </div>
-                      
-                      <div className="bg-white rounded-xl p-3 shadow">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-10 h-10 bg-blue-100 rounded-lg"></div>
-                          <div className="flex-1">
-                            <div className="h-2 bg-gray-800 rounded w-3/4 mb-1"></div>
-                            <div className="h-1 bg-gray-300 rounded w-1/2"></div>
-                          </div>
-                          <div className="text-sm font-black text-blue-600">5K</div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Cart Button - Fixed */}
-                    <div className="absolute bottom-4 right-4 w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full shadow-lg flex items-center justify-center">
-                      <span className="text-white font-black text-sm">3</span>
-                    </div>
-                  </div>
+      {/* Content Container */}
+      <div className="relative z-10">
+        {/* Hero Section - Desktop Fullscreen Fixed */}
+        <div className="relative overflow-hidden">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
+            <div className="text-center lg:text-left lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+              {/* Left Content - Fixed Layout */}
+              <div className="space-y-6 lg:space-y-8">
+                {/* Animated Badge */}
+                <div className="inline-flex items-center px-4 py-2 text-sm lg:text-base font-bold text-white bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                  <span className="w-2 h-2 lg:w-3 lg:h-3 bg-green-400 rounded-full mr-2 lg:mr-3 animate-pulse"></span>
+                  Open for Business 24/7
                 </div>
                 
-                {/* Floating Elements - Fixed */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-yellow-400 rounded-full opacity-20 animate-pulse"></div>
-                <div className="absolute -bottom-4 -left-4 w-14 h-14 bg-green-400 rounded-full opacity-20 animate-pulse"></div>
-                <div className="absolute top-1/2 -right-8 w-10 h-10 bg-blue-400 rounded-full opacity-20 animate-pulse"></div>
+                <div className="space-y-4 lg:space-y-6">
+                  <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-tight">
+                    <span className="block mb-2 lg:mb-4 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500">
+                      Restaurant
+                    </span>
+                    <span className="block text-2xl sm:text-4xl lg:text-5xl xl:text-6xl text-white/90">
+                      Digital Experience
+                    </span>
+                  </h1>
+                  
+                  <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white/80 leading-relaxed max-w-3xl">
+                    Transform your dining experience with 
+                    <span className="font-bold text-yellow-400"> QR Code Ordering</span>, 
+                    <span className="font-bold text-green-400"> Instant Payments</span>, and 
+                    <span className="font-bold text-blue-400"> Smart Analytics</span>
+                  </p>
+                </div>
+                
+                {/* Enhanced CTA Buttons - Fixed Size */}
+                <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 lg:gap-6">
+                  <Link
+                    to="/scan"
+                    className="group relative inline-flex items-center justify-center px-6 sm:px-8 lg:px-10 xl:px-12 py-3 lg:py-4 text-base sm:text-lg lg:text-lg xl:text-xl font-black text-white bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl transition-all transform hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/25 overflow-hidden"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="relative flex items-center">
+                      <svg className="w-5 h-5 sm:w-6 lg:w-7 xl:w-8 mr-2 sm:mr-3 lg:mr-3 xl:mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M12 4v16m8-8H4" />
+                      </svg>
+                      <span>Scan & Order Now</span>
+                      <svg className="w-4 h-4 sm:w-5 lg:w-5 xl:w-6 ml-2 lg:ml-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </div>
+                  </Link>
+                  
+                  <Link
+                    to="/menu?table=1"
+                    className="group relative inline-flex items-center justify-center px-6 sm:px-8 lg:px-10 xl:px-12 py-3 lg:py-4 text-base sm:text-lg lg:text-lg xl:text-xl font-black text-white bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl transition-all transform hover:scale-105 hover:bg-white/20 hover:shadow-2xl hover:shadow-white/10 overflow-hidden"
+                  >
+                    <div className="relative flex items-center">
+                      <svg className="w-5 h-5 sm:w-6 lg:w-7 xl:w-8 mr-2 sm:mr-3 lg:mr-3 xl:mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                      <span>View Menu</span>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Right Content - Desktop Visual Fixed */}
+              <div className="hidden lg:block relative">
+                <div className="relative">
+                  {/* Phone Mockup - Fixed Size */}
+                  <div className="relative mx-auto w-64 h-[500px] bg-gradient-to-br from-gray-900 to-gray-800 rounded-[2.5rem] shadow-2xl border-6 border-gray-800 overflow-hidden">
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-2xl"></div>
+                    
+                    {/* Screen Content - Fixed */}
+                    <div className="h-full bg-gradient-to-br from-orange-50 to-red-50 p-4">
+                      <div className="text-center mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl mx-auto mb-2"></div>
+                        <div className="text-sm font-black text-gray-900">Restaurant App</div>
+                        <div className="text-xs text-gray-600">Meja 1</div>
+                      </div>
+                      
+                      {/* Menu Items - Fixed */}
+                      <div className="space-y-3">
+                        <div className="bg-white rounded-xl p-3 shadow">
+                          <div className="flex items-center space-x-3">
+                            <div className="w-10 h-10 bg-orange-100 rounded-lg"></div>
+                            <div className="flex-1">
+                              <div className="h-2 bg-gray-800 rounded w-3/4 mb-1"></div>
+                              <div className="h-1 bg-gray-300 rounded w-1/2"></div>
+                            </div>
+                            <div className="text-sm font-black text-orange-600">25K</div>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-white rounded-xl p-3 shadow">
+                          <div className="flex items-center space-x-3">
+                            <div className="w-10 h-10 bg-green-100 rounded-lg"></div>
+                            <div className="flex-1">
+                              <div className="h-2 bg-gray-800 rounded w-3/4 mb-1"></div>
+                              <div className="h-1 bg-gray-300 rounded w-1/2"></div>
+                            </div>
+                            <div className="text-sm font-black text-green-600">20K</div>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-white rounded-xl p-3 shadow">
+                          <div className="flex items-center space-x-3">
+                            <div className="w-10 h-10 bg-blue-100 rounded-lg"></div>
+                            <div className="flex-1">
+                              <div className="h-2 bg-gray-800 rounded w-3/4 mb-1"></div>
+                              <div className="h-1 bg-gray-300 rounded w-1/2"></div>
+                            </div>
+                            <div className="text-sm font-black text-blue-600">5K</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Cart Button - Fixed */}
+                      <div className="absolute bottom-4 right-4 w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full shadow-lg flex items-center justify-center">
+                        <span className="text-white font-black text-sm">3</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Floating Elements - Fixed */}
+                  <div className="absolute -top-4 -right-4 w-16 h-16 bg-yellow-400 rounded-full opacity-20 animate-pulse"></div>
+                  <div className="absolute -bottom-4 -left-4 w-14 h-14 bg-green-400 rounded-full opacity-20 animate-pulse"></div>
+                  <div className="absolute top-1/2 -right-8 w-10 h-10 bg-blue-400 rounded-full opacity-20 animate-pulse"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
       {/* Stats Section - Desktop Enhanced */}
       <div className="py-16 bg-gradient-to-br from-gray-900 to-black">
@@ -380,6 +387,7 @@ const HomePage = () => {
           </div>
         </div>
       </footer>
+      </div>
     </div>
   );
 };
